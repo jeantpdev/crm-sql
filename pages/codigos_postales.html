@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/codigos.css">
+    <link rel="shortcut icon" href="../img/descarga.ico" type="image/x-icon">
+    <title>Codigos Postales</title>
+</head>
+
+<body>
+
+    <div class="pagina">
+        <section class="contenedor-pagina">
+
+            <div class="menu-opciones">
+
+                <div class="contenedor-opciones">
+                    <div class="info-arriba">
+                        <div class="datos-empresa">
+
+                            <figure class="imagen-empresa">
+                                 <img src="../img/procure.svg" alt="">
+<h1>Empresa</h1>
+                            </figure>
+
+                            <div class="titulo-empresa">
+                                 
+                            </div>
+
+                        </div>
+
+                        <ul class="opciones" id="opcionesMenu">
+                            
+                        </ul>
+                    </div>
+
+                    <div class="info-abajo">
+                        <div class="info-usuario">
+
+                            <figure>
+                                <img src="../img/male-profile.svg" alt="">
+                            </figure>
+
+                            <div class="datos-usuario" id="datosUsuarioMenu">
+
+                            </div>
+
+                        </div>
+                        <div class="cerrar-sesion">
+                            <button class="btn-success cerrar-sesion" id="cerrarSesion">Cerrar sesión</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contenido-pagina">
+
+                <div class="contenido">
+
+                    <div class="titulo-central">
+                        <label>Código postal:
+                            <input type="text" id="codigoPostal" placeholder="ingresa el codigo postal">
+                        </label>
+                        
+                        <button id="btnBuscarCodigo" ><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                    </div>
+
+                    <div class="contenedor-informacion">
+                        <div class="informacion-perfil" id="informacionPerfil">
+
+                            <div class="campo">
+                                <div class="titulo">
+                                    <p>Código postal</p>
+                                </div>
+                                <div class="texto nombre" id="verCodigoPostal">
+                                </div>
+                            </div>
+                
+                            <div class="campo">
+                                <div class="titulo">
+                                    <p>Nombre provincia</p>
+                                </div>
+                                <div class="texto direccion" id="verNombreProvincia">
+                                </div>
+                            </div>
+                
+                            <div class="campo">
+                                <div class="titulo">
+                                    <p>Nombre Comunidad</p>
+                                </div>
+                                <div class="texto nombre" id="verNombreComunidad">
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="contenedor-mensaje">
+                        <div class="contenedor-cuenta" id="cuentaIngresar">
+                        
+                        </div>
+
+                    </div>
+                   
+
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="../js/codigos_postales/Vista/codigos.js" type="module"></script>
+  
+    
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@import url(./config/global.css);
+@import url(./config/grid.css);
+@import url(./componentes/modal/modal.css);
+/*@import url(./componentes/menu/menu.css);*/
+@import url(./componentes/menu/menu-opciones.css); 
+@import url(./componentes/tabla/tabla.css);
+@import url(./componentes/cuadros-estadisticos/cuadros-estadisticos.css);
+
+
+
+.tabla {
+    height: 64vh;
+}
+
+a{
+    color: var(--blanco);
+}
+
+.seleccion-compañia{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

@@ -1,0 +1,52 @@
+@import url(./config/global.css);
+@import url(./config/grid.css);
+@import url(./componentes/modal/modal.css);
+@import url(./componentes/menu/menu-opciones.css);
+@import url(./componentes/tabla/tabla.css);
+@import url(./componentes/cuadros-estadisticos/cuadros-estadisticos.css);
+
+.modal .modal-cuerpo .informacion-usuario .datos-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1vw;
+    flex-direction: row;
+}
+
+/* .modal-cuerpo .informacion-agente{
+    display: flex;
+    padding: 2vw 0;
+    justify-content: space-around;
+} */
+
+
+.modal-cuerpo .informacion-agente {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2vw;
+}
+
+.modal-cuerpo .informacion-agente .no-editable {
+    display: flex;
+    flex-wrap: wrap;
+    /* column-gap: 5vw; */
+    justify-content: space-around;
+}
+
+.modal-cuerpo .informacion-agente .editable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2vw;
+    height: 50vh;
+}
+
+.tabla-usuarios {
+    height: 70vh;
+}
+
+.tabla-usuarios td{
+    text-overflow: clip;
+}

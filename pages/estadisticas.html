@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    <link rel="shortcut icon" href="../img/descarga.ico" type="image/x-icon">
+    <title>Estadisticas</title>
+</head>
+
+<body>
+
+    <div class="pagina">
+        <section class="contenedor-pagina">
+
+            <div class="menu-opciones">
+
+                <div class="contenedor-opciones">
+                    <div class="info-arriba">
+                        <div class="datos-empresa">
+
+                            <figure class="imagen-empresa">
+                                 <img src="../img/procure.svg" alt="">
+<h1>Empresa</h1>
+                            </figure>
+
+                            <div class="titulo-empresa">
+                                 
+                            </div>
+
+                        </div>
+
+                        <ul class="opciones" id="opcionesMenu">
+
+                        </ul>
+                    </div>
+
+                    <div class="info-abajo">
+                        <div class="info-usuario">
+
+                            <figure>
+                                <img src="../img/male-profile.svg" alt="">
+                            </figure>
+
+                            <div class="datos-usuario" id="datosUsuarioMenu">
+
+                            </div>
+
+                        </div>
+                        <div class="cerrar-sesion">
+                            <button class="btn-success cerrar-sesion" id="cerrarSesion">Cerrar sesión</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contenido-pagina" id="contenidoPagina">
+
+                <div class="contenido-datos-estadisticos" id="contenedorDatos">
+
+                </div>
+
+                <div class="graficas">
+
+
+                    <div class="contenido-graficas">
+
+                        <div class="promedios">
+
+
+
+                        </div>
+
+                        <div class="graficas-contenido">
+                            <div class="ventas-mes cont-grafica">
+                                <div class="titulo-grafica">
+                                    <p>Venta por mes</p>
+                                </div>
+
+                                <div class="grafica-ventas-mes">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+
+                            </div>
+
+                            <div class="ventas-realizar cont-grafica">
+                                <div class="titulo-grafica" id="tituloGrafica">
+
+                                </div>
+
+                                <div class="grafica-ventas-realizar">
+                                    <canvas id="myDona"></canvas>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ventas">
+
+                        <div class="status-ventas">
+                            <h3>Status de las ventas</h3>
+                            <br>
+                            <div class="contenido-status-ventas" id="contenidoStatusVentas">
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Activas</p>
+                                    </div>
+                                    
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+               
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-rotate-left"></i>
+                                    </div>
+                                    
+                                    <div class="titulo-venta">
+                                        <p>Devueltas</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    
+                                    <div class="titulo-venta">
+                                        <p>Canceladas</p>
+                                    </div>
+                                    
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Bajas</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-signature"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Firmadas</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-pause"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Pendiente</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Recuperada</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-hourglass"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Temporal</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Verificada</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>Desistimiento</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="status">
+                                    <div class="icono-venta">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+
+                                    <div class="titulo-venta">
+                                        <p>No recuperable</p>
+                                    </div>
+
+                                    <div class="cant-venta">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="contenido-tabla">
+
+                            <div class="select-tabla">
+                                <label for="estado"><b>Seleciona el estado:</b>
+                                    <select name="estado" id="estadoVenta">
+                                        <option value="no selecionada" selected>no selecionada</option>
+                                        <option value="activa">activa</option>
+                                        <option value="devuelta">devuelta</option>
+                                        <option value="cancelada">cancelada</option>
+                                        <option value="bajas">bajas</option>
+                                        <option value="firmado">firmado</option>
+                                        <option value="pendiente">pendiente</option>
+                                        <option value="recuperada">recuperada</option>
+                                        <option value="temporal">temporal</option>
+                                        <option value="verificada">verificada</option>
+                                        <option value="desistimiento">desistimiento</option>
+                                        <option value="no recuperable">no recuperable</option>
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <div class="tabla" id="tablaDatos">
+                                <table>
+                                    <tr>
+                                        <th>fecha_ingreso_venta</th>
+                                        <th>nombre_agente</th>
+                                        <th>observaciones_venta</th>
+                                        <th>verificacion_calidad</th>
+                                        <th>observaciones_calidad</th>
+                                        <th>observaciones_adicionales</th>
+                                        <th>estado</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    </div>
+
+    <script src="../js/estadisticas/Vista/estadisticas.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</body>
+
+</html>

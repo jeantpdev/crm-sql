@@ -1,0 +1,107 @@
+@import url(./config/global.css);
+@import url(./config/grid.css);
+@import url(./componentes/modal/modal.css);
+/*@import url(./componentes/menu/menu.css);*/
+@import url(./componentes/menu/menu-opciones.css);
+@import url(./componentes/tabla/tabla.css);
+@import url(./componentes/cuadros-estadisticos/cuadros-estadisticos.css);
+
+.contenido-pagina {
+    display: grid;
+    place-content: center;
+}
+
+.contenido-pagina .contenido {
+    display: flex;
+    padding: 2vw;
+    row-gap: 15vh;
+    height: auto;
+    min-height: 60vh;
+    border-radius: 0.5vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: var(--blanco);
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contenido-pagina .contenido .titulo-central {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+    align-items: center;
+}
+
+.contenido-pagina .contenido .titulo-central button{
+    border: none;
+    width: 5vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.contenido-pagina .contenido .titulo-central label {
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.contenido-pagina .contenido .titulo-central input{
+    width: 20vw;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+}
+
+.contenido-pagina .contenido .cuadro-busqueda{
+    display: grid;
+    justify-content: center;
+}
+
+.contenido-pagina .contenido .contenedor-informacion {
+    display: grid;
+    grid-area: informacion;
+    row-gap: 2vw;
+}
+
+.contenido-pagina .contenido .contenedor-informacion .botones-perfil {
+    text-align: end;
+}
+
+.contenido-pagina .contenido .contenedor-informacion .botones-perfil button {
+    background-color: var(--primario);
+    border: none;
+    color: var(--blanco);
+    border-radius: 0.5vw;
+    padding: 1vw 2vw;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.contenido-pagina .contenido .contenedor-informacion .informacion-perfil {
+    display: flex;
+    column-gap: 5vw;
+    justify-content: center;
+}
+
+.contenido-pagina .contenido .contenedor-informacion .informacion-perfil .campo .titulo p {
+    font-size: 1.4vw;
+}
+
+.contenido-pagina .contenido .contenedor-informacion .informacion-perfil .campo .texto p {
+    font-size: 1.2vw;
+    color: var(--textoGris);
+    text-align: center;
+}
+
+.contenedor-mensaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-cuenta{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}

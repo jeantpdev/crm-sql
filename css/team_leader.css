@@ -1,0 +1,172 @@
+@import url(./config/global.css);
+@import url(./config/grid.css);
+@import url(./componentes/modal/modal.css);
+/*@import url(./componentes/menu/menu.css);*/
+@import url(./componentes/menu/menu-opciones.css);
+@import url(./componentes/tabla/tabla.css);
+@import url(./componentes/cuadros-estadisticos/cuadros-estadisticos.css);
+
+.contenedor-scroll{
+    display: flex;
+    flex-direction: column;
+    height: 80dvh;
+    overflow: auto;
+}
+.pagina .contenedor .agentes .contenido-agentes {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2vw;
+    padding: 1vw;
+    row-gap: 5vh;
+}
+
+.contenido-abajo-agentes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.contenido-abajo-agentes .datos-agente,
+.estadisticas-agente,
+.estado-ventas-agente {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+.contenedor-abajo .lista-agentes {
+    height: 40vh;
+    overflow: auto;
+}
+
+.contenedor-arriba {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.contenedor-arriba .titulo-arriba p {
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.contenedor-arriba .lista-agentes .agente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.titulo-contenido p {
+    font-size: 2vw;
+    border-bottom: 1px solid black;
+    width: 45dvw;
+}
+
+
+.contenido-abajo-agentes .campos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.contenido-abajo-agentes .campos .campo {
+    width: 20dvw;
+}
+
+.contenido-abajo-agentes .campos .campo .titulo {
+    width: 30dvw;
+    font-weight: bold;
+}
+
+.agentes {
+    width: 60vw;
+}
+
+.buscar-agente select {
+    width: 15vw;
+    padding: 0.5vw 1vw;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    border-radius: 0.5vw;
+}
+
+.info-agentes {
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+}
+
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.tarjetas .tarjeta{
+    background-color: #ffffff;
+    display: flex;
+    padding: 1.2vw 1vw;
+    border-radius: 0.5vw;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjetas .tarjeta-equipo{
+    display: flex;
+    row-gap: 2vh;
+    height: 60vh;
+}
+
+.tarjeta-equipo .cuerpo .descripcion{
+    height: 45vh;
+    overflow: auto;
+}
+
+.tarjeta-equipo .cuerpo .descripcion ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: flex-start;
+}
+
+.tarjeta-equipo .cuerpo .descripcion ul li{
+    font-size: 1.3vw;
+}
+
+.tarjeta .cabecera .icono i {
+    font-size: 2vw;
+}
+
+.tarjeta .cabecera .titulo p {
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.tarjeta .cuerpo .agentesPertenecientes p {
+    font-size: 1vw;
+}
+
+.tarjeta .pie {
+    text-align: end;
+}
+
+.tarjeta .pie a {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+}
+
+.tarjeta .pie a:hover {
+    background-color: var(--hover-primario);
+}
+
+.seleccion-compañia{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
