@@ -23,15 +23,15 @@ const Controlador = {
 
     },
 
-    async filtrarTabla(){
+    async filtrarTabla() {
         const { columnaBuscar, textoBuscar } = Vista.filtrarTabla();
         const res = await ModeloGeneral.filtrarTabla(columnaBuscar, textoBuscar);
         console.log(res)
-        if (localStorage.getItem('rol') == "admin"){
+        if (localStorage.getItem('rol') == "admin") {
             Vista.mostrarTodosUsuarios(res)
             Vista.mostrarFiltrosActivos(columnaBuscar, textoBuscar);
         }
-        if(localStorage.getItem('rol') == "team leader"){
+        if (localStorage.getItem('rol') == "team leader") {
             Vista.mostrarUsuariosTeamLeader(res);
             Vista.mostrarFiltrosActivos(columnaBuscar, textoBuscar);
         }
@@ -56,39 +56,27 @@ const Controlador = {
 
     async agregarUsuarioAdmin() {
 
-        const { primerNombre, primerApellido, cedula, correo, celular, grupo, campaña, liderResponsable, liderEquipo } = Vista.enviarDatosNuevoUsuario()
+        const { primerNombre, primerApellido, cedula, correo, liderEquipo } = Vista.enviarDatosNuevoUsuario()
 
         const usuario = Miscelaneas.unirNombreApellido(primerNombre, primerApellido)
         const nombre = `${Miscelaneas.capitalizarTexto(primerNombre.trim())} ${Miscelaneas.capitalizarTexto(primerApellido.trim())}`
-        const apodo = `${primerNombre.trim().toLowerCase()} ${primerApellido.trim().toLowerCase()}`
-        const cedulaUsuario = localStorage.getItem('cedula')
+        //const apodo = `${primerNombre.trim().toLowerCase()} ${primerApellido.trim().toLowerCase()}`
+        //const cedulaUsuario = localStorage.getItem('cedula')
 
         try {
+            const cedula_usuario = cedula ? cedula : Miscelaneas.generarNumeroAleatorio()
 
-            // Si la cédula viene vacía, se creará una automaticamente y se envian estos datos
-            if (cedula.length == 0) {
-                const cedulaFinal = Miscelaneas.generarNumeroAleatorio(cedula);
-                const res = await Modelo.insertarAgente(apodo, nombre, usuario, cedulaFinal, correo, celular, grupo, campaña, liderResponsable, liderEquipo, cedulaUsuario)
+            const res = await Modelo.insertarAgente(nombre, usuario, cedula_usuario, correo, liderEquipo)
 
-                if (res.status == 200) {
-                    swalAlert.mostrarAlertaSatisfactorio("Usuario creado con éxito")
-                    Miscelaneas.recargarPagina(1000)
-                } else {
-                    swalAlert.mostrarMensajeError("Hubo un error al crear el usuario")
-                }
-                
-            // Si la cédula no viene vacia, se enviarán todos los datos
+            console.log(res)
+/*              
+            if (res.status == 200) {
+                swalAlert.mostrarAlertaSatisfactorio("Usuario creado con éxito")
+                Miscelaneas.recargarPagina(1000)
             } else {
-                const res = await Modelo.insertarAgente(apodo, nombre, usuario, cedula, correo, celular, grupo, campaña, liderResponsable, liderEquipo, cedulaUsuario)
-
-                if (res.status == 200) {
-                    swalAlert.mostrarAlertaSatisfactorio("Usuario creado con éxito")
-                    Miscelaneas.recargarPagina(1000)
-                } else {
-                    swalAlert.mostrarMensajeError("Hubo un error al crear el usuario")
-                }
+                swalAlert.mostrarMensajeError("Hubo un error al crear el usuario")
             }
-
+*/
 
         } catch (error) {
             console.log(error)
@@ -112,7 +100,7 @@ const Controlador = {
         }
     },
 
-    async editarUsuarioAdmin(){
+    async editarUsuarioAdmin() {
 
         try {
             swalAlert.mostrarPantallaDeCarga("Actualizando usuario...")
@@ -121,18 +109,18 @@ const Controlador = {
             const datosAgente = await ModeloGeneral.traerDatosPersonalesAgente(cedula)
             const idAgente = datosAgente.data['id_agente']
             const cedulaUsuario = localStorage.getItem('cedula')
- 
-            const res =  await Modelo.actualizarAgente(datosUsuarioEditarAdmin, idAgente, cedulaUsuario)
 
-            if (res.status == 200){
+            const res = await Modelo.actualizarAgente(datosUsuarioEditarAdmin, idAgente, cedulaUsuario)
+
+            if (res.status == 200) {
                 Swal.close();
                 swalAlert.mostrarAlertaSatisfactorio("Se actualizó los datos del usuario");
                 Controlador.mostrarTodosUsuarios();
-            }else{
+            } else {
                 Swal.close();
                 swalAlert.mostrarMensajeError("No se pudo actualizar el usuario")
             }
-            
+
         } catch (error) {
             console.log(error)
             Swal.close();
@@ -175,7 +163,7 @@ const Controlador = {
             const cedulaLider = localStorage.getItem('cedula')
             const res = await ModeloGeneral.traerDatosPersonalesAgente(cedulaLider)
             const liderEquipo = res.data['lider_equipo']
-            
+
             const { primerNombre, primerApellido, cedula, correo, celular, grupo, campaña } = Vista.enviarDatosAgenteTeamLeader()
             const usuario = Miscelaneas.unirNombreApellido(primerNombre, primerApellido)
             const nombre = `${Miscelaneas.capitalizarTexto(primerNombre.trim())} ${Miscelaneas.capitalizarTexto(primerApellido.trim())}`
@@ -188,7 +176,7 @@ const Controlador = {
                 if (res.status == 200) {
                     swalAlert.mostrarAlertaSatisfactorio("Usuario unido al equipo")
                     Miscelaneas.recargarPagina(1000)
-                }else{
+                } else {
                     swalAlert.mostrarMensajeError("Error al crear al usuario")
                 }
 
@@ -197,7 +185,7 @@ const Controlador = {
                 if (res.status == 200) {
                     swalAlert.mostrarAlertaSatisfactorio("Usuario unido al equipo")
                     Miscelaneas.recargarPagina(1000)
-                }else{
+                } else {
                     swalAlert.mostrarMensajeError("Error al crear al usuario")
                 }
             }
@@ -230,18 +218,18 @@ const Controlador = {
         }
     },
 
-    async editarUsuarioTeamLeader(){
+    async editarUsuarioTeamLeader() {
 
         try {
             swalAlert.mostrarPantallaDeCarga("Actualizando usuario...")
-            const datosUsuarioEditarTeamLeader= Vista.enviarDatosAgenteTeamLeader();
+            const datosUsuarioEditarTeamLeader = Vista.enviarDatosAgenteTeamLeader();
 
-            const res =  await Modelo.actualizarAgenteTeamLeader(datosUsuarioEditarTeamLeader)
-            if (res.status == 200){
+            const res = await Modelo.actualizarAgenteTeamLeader(datosUsuarioEditarTeamLeader)
+            if (res.status == 200) {
                 Swal.close();
                 swalAlert.mostrarAlertaSatisfactorio("Se actualizó los datos del usuario");
                 Controlador.mostrarUsuariosTeamLeader();
-            }else{
+            } else {
                 Swal.close();
                 swalAlert.mostrarMensajeError("No se pudo actualizar el usuario")
             }

@@ -261,10 +261,6 @@ const Vista = {
         const primerApellido = document.getElementById('primerApellido').value;
         const cedula = document.getElementById('cedulaAgente').value;
         const correo = document.getElementById('correoAgente').value;
-        const celular = document.getElementById('celularAgente').value;
-        const grupo = document.getElementById('grupo').value;
-        const campaña = document.getElementById('campaña').value;
-        const liderResponsable = document.getElementById('liderResponsable').value;
         const liderEquipo = document.getElementById('liderEquipo').value;
 
         return {
@@ -272,10 +268,6 @@ const Vista = {
             primerApellido,
             cedula,
             correo,
-            celular,
-            grupo,
-            campaña,
-            liderResponsable,
             liderEquipo
         };
 

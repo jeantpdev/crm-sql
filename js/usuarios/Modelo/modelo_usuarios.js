@@ -20,28 +20,23 @@ const Modelo = {
         return res
     },
 
-    async insertarAgente(apodo, nombre, usuario, cedulaFinal, correo, celular, grupo, campaña, liderResponsable, liderEquipo, cedulaUsuario) {
+    async insertarAgente(nombre, usuario, cedula, correo, liderEquipo) {
 
         const data_agentes = {
-            apodo: apodo,
             usuario: usuario,
             nombre: nombre,
-            cedula: cedulaFinal,
+            cedula: cedula,
             correo: correo || 'no dado',
-            celular: celular || 'no dado',
-            estado: "activo",
-            grupo: grupo || 'no dado',
-            campana: campaña,
-            lider_responsable: liderResponsable || 'no dado',
             lider_equipo: liderEquipo,
             rol: 'agente',
-            contrasena: "Global2024*",
-            cedula_usuario: cedulaUsuario
+            contrasena: "Global2024*"
         }
+        
+        console.log(data_agentes)
 
         const res = await axios({
             method: "POST",
-            url: "http://127.0.0.1:5700/registro-agente/",
+            url: "http://127.0.0.1:5700/crear-usuario/",
             headers: config.headers,
             data: data_agentes
         })
