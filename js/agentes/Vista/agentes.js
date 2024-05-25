@@ -202,7 +202,7 @@ const Vista = {
                             <p>Nombre:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="Nombre" id="nombre" value = "Vaso"/>
+                            <input type="text" placeholder="Nombre" id="nombre"/>
 
                         </div>
                     </div>
@@ -212,7 +212,7 @@ const Vista = {
                             <p>DNI:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="DNI" id="dni" value = "E35432X"/>
+                            <input type="text" placeholder="DNI" id="dni"/>
                         </div>
                     </div>
 
@@ -222,7 +222,7 @@ const Vista = {
                             <p>Telefono:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="Telefono" id="telefono" value = "324253">
+                            <input type="text" placeholder="Telefono" id="telefono">
                         </div>
                     </div>
 
@@ -231,7 +231,7 @@ const Vista = {
                             <p>Telefono fijo (si no tiene, dejarlo vacío):</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="Telefono fijo" id="telefonoFijo" value = "12314343">
+                            <input type="text" placeholder="Telefono fijo" id="telefonoFijo">
                         </div>
                     </div>
 
@@ -240,7 +240,7 @@ const Vista = {
                             <p>Correo (si no tiene, dejarlo vacío):</p>
                         </div>
                         <div class="entrada">
-                            <input type="email" name="email" id="correo" placeholder="Correo electronico" value = "correo@asd"/>
+                            <input type="email" name="email" id="correo" placeholder="Correo electronico" value = "@example.com"/>
                         </div>
                     </div>
 
@@ -249,7 +249,7 @@ const Vista = {
                             <p>Dirección:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="Dirección" id="direccion" value = "direccion"/>
+                            <input type="text" placeholder="Dirección" id="direccion" value = "Tv 50A - 58#217"/>
                         </div>
                     </div>
 
@@ -270,7 +270,7 @@ const Vista = {
                             <p>IBAN:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" name="luz" id="iban" placeholder="iban" value = "asd" />
+                            <input type="text" name="luz" id="iban" placeholder="iban" value = "E123" />
                         </div>
                     </div>
 
@@ -279,7 +279,7 @@ const Vista = {
                             <p>CUPS Luz:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" name="luz" id="cupsLuz" placeholder="CUPS Luz" value = "34241423"/>
+                            <input type="text" name="luz" id="cupsLuz" placeholder="CUPS Luz"/>
                         </div>
                     </div>
 
@@ -288,7 +288,7 @@ const Vista = {
                             <p>CUPS Gas:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" name="luz" id="cupsGas" placeholder="CUPS Gas" value = "43242352"/>
+                            <input type="text" name="luz" id="cupsGas" placeholder="CUPS Gas"/>
                         </div>
                     </div>
 
@@ -297,7 +297,7 @@ const Vista = {
                             <p>Numero del contrato:</p>
                         </div>
                         <div class="entrada">
-                            <input type="text" placeholder="Numero del contrato" id="numeroContrato" required value = "213443">
+                            <input type="text" placeholder="Numero del contrato" id="numeroContrato" value = "213443">
                         </div>
                     </div>
 
